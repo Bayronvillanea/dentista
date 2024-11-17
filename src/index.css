@@ -1,0 +1,15 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* TailwindCSS estilos generales */
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Fondo de página claro */
+  }
+}
+
+/* Efectos de hover */
+.card:hover {
+  @apply transform scale-105 shadow-xl;
+}
