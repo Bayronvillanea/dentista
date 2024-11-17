@@ -32,10 +32,12 @@ const ContactForm = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder=" "
+              placeholder=" " // El placeholder ya no se ve, solo es para mantener el espacio
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
             />
-            <label className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300">
+            <label
+              className={`absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300 ${formData.name || formData.name !== '' ? 'top-2 text-xs' : ''}`}
+            >
               Nombre
             </label>
           </div>
@@ -47,10 +49,12 @@ const ContactForm = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder=" "
+              placeholder=" " // El placeholder ya no se ve, solo es para mantener el espacio
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
             />
-            <label className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300">
+            <label
+              className={`absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300 ${formData.email || formData.email !== '' ? 'top-2 text-xs' : ''}`}
+            >
               Correo Electrónico
             </label>
           </div>
@@ -62,10 +66,12 @@ const ContactForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              placeholder=" "
+              placeholder=" " // El placeholder ya no se ve, solo es para mantener el espacio
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"
             />
-            <label className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300">
+            <label
+              className={`absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300 ${formData.phone || formData.phone !== '' ? 'top-2 text-xs' : ''}`}
+            >
               Teléfono
             </label>
           </div>
@@ -83,7 +89,9 @@ const ContactForm = () => {
               <option value="ortodoncia">Ortodoncia</option>
               <option value="estetica">Estética Dental</option>
             </select>
-            <label className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300">
+            <label
+              className={`absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm transition-all duration-300 ${formData.service || formData.service !== '' ? 'top-2 text-xs' : ''}`}
+            >
               
             </label>
           </div>
